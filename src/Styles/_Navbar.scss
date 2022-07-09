@@ -1,0 +1,56 @@
+@use'./base' as *;
+
+@mixin Navbar {
+    .container-nav{
+     
+        width: 100%;
+        z-index: 2;
+        background-color: $white-color;
+        @include Center;      
+        position: fixed;
+        
+        h1{
+            color:$white-color;
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px 4px #000000;
+            letter-spacing: 4px;
+      
+
+        }
+      }        
+    }
+       /* z-index: 2;
+        width: 100%;
+        /*nav{
+            display: flex;
+          
+            width: 70%;
+
+            .logo{
+                @include Center;
+                padding: 10px;
+                h1{
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: $white-color;
+                }
+            }
+            ul{
+                @include Center;
+                width: 100%;
+                justify-content: flex-end;
+                gap: 20px;
+           
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: black;
+                    }
+                }
+            }
+
+        }
+    }    
+}*/

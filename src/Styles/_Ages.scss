@@ -1,0 +1,31 @@
+@use'./base' as *;
+@mixin Ages {
+    .container-ages{
+        @include Center;
+       .contents{
+            
+             .title{
+                 @include Title;                        
+               }                  
+                .ages{
+                    @include Center;
+                    flex-wrap: wrap;
+                    gap: 50px;
+                    margin: 50px 0px 50px 0px;
+                    img{
+                        width:  clamp(200px, 60vw, 300px);
+                    }
+                    h3{
+                        @include H3; 
+                        text-align: center; 
+                        font-size: 40px;                   
+                    }
+                    h4{
+                        @include H4; 
+                        text-align: center; 
+                        font-size: 25px;
+                    }
+                }        
+       }
+    }
+}

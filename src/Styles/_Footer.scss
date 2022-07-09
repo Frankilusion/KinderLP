@@ -1,0 +1,38 @@
+@use'./base' as *;
+
+@mixin Footer {
+    .container-footer{    
+        position: relative;
+        .svg-top{
+            position: absolute;
+            top: -1px;
+            z-index: 1;  //por el before  
+        }
+        footer::before{
+            content: "";
+            width: 100%;
+            height: inherit;
+            background-color: $secondary-color;
+            position: absolute;
+        }
+        footer{
+            position: relative;
+            @include Center;
+            align-items: flex-end;
+            @include BackWallpaper('../Images/backAbout.jpg');
+            width: 100%;
+            height: 50vh;
+            .content{
+                z-index: 1;
+                margin: 20px;
+                h1{
+                    text-align: center;  
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
+            
+        }
+       
+        
+    }
+}

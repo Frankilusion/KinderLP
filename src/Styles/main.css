@@ -1,0 +1,513 @@
+/* z-index: 2;
+        width: 100%;
+        /*nav{
+            display: flex;
+
+            width: 70%;
+
+            .logo{
+                @include Center;
+                padding: 10px;
+                h1{
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: $white-color;
+                }
+            }
+            ul{
+                @include Center;
+                width: 100%;
+                justify-content: flex-end;
+                gap: 20px;
+
+                li{
+                    list-style: none;
+                    a{
+                        text-decoration: none;
+                        font-size: 20px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        color: black;
+                    }
+                }
+            }
+
+        }
+    }    
+}*/
+.color1 {
+  color: #ea3d84;
+}
+
+.color2 {
+  color: #ffaf00;
+}
+
+.color3 {
+  color: #16f981;
+}
+
+.color4 {
+  color: #18bcc5;
+}
+
+.container-nav {
+  width: 100%;
+  z-index: 2;
+  background-color: #fbfcff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.container-nav h1 {
+  color: #fbfcff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px #000000;
+  letter-spacing: 4px;
+}
+
+.container-home {
+  position: relative;
+}
+.container-home .content::before {
+  content: "";
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  background: linear-gradient(0deg, #ea3d84, rgba(234, 61, 133, 0.4039215686));
+}
+.container-home .content {
+  height: 100vh;
+  background-image: url("../Images/photo-home.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-home .content .tittleMain {
+  position: absolute;
+  z-index: 1;
+}
+.container-home .content .tittleMain h5 {
+  font-size: clamp(30px, 5vw, 50px);
+  text-align: center;
+  font-family: petunia;
+  color: #fbfcff;
+  text-shadow: 2px 2px 4px #000000;
+}
+.container-home .content .tittleMain h1 {
+  font-family: gramja;
+  font-size: clamp(35px, 7vw, 80px);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+  color: #fbfcff;
+  text-shadow: 2px 2px 4px #000000;
+}
+.container-home .content .tittleMain .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.container-home .content .tittleMain .button a {
+  background-color: #ffaf00;
+  padding: 0px 40px 0px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fbfcff;
+}
+.container-home .content .tittleMain .button h6 {
+  font-size: clamp(30px, 5vw, 40px);
+  font-family: petunia;
+}
+.container-home .svg-bottom {
+  position: absolute;
+  bottom: -1px;
+}
+
+.container-ages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-ages .contents .title {
+  margin: 30px 0px 30px 0px;
+}
+.container-ages .contents .title h2 {
+  font-weight: bold;
+  font-size: clamp(30px, 5vw, 60px);
+  font-family: petunia;
+  text-align: center;
+}
+.container-ages .contents .title figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-ages .contents .title figure img {
+  width: clamp(300px, 30vw, 500px);
+}
+.container-ages .contents .title h1 {
+  font-family: gramja;
+  font-size: clamp(35px, 7vw, 80px);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+}
+.container-ages .contents .ages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px 0px 50px 0px;
+}
+.container-ages .contents .ages img {
+  width: clamp(200px, 60vw, 300px);
+}
+.container-ages .contents .ages h3 {
+  font-family: Gramja;
+  font-size: 30px;
+  text-align: center;
+  font-size: 40px;
+}
+.container-ages .contents .ages h4 {
+  font-family: Gramja;
+  font-size: clamp(22px, 2.5vw, 30px);
+  text-align: center;
+  font-size: 25px;
+}
+
+.container-about {
+  position: relative;
+}
+.container-about .svg-top {
+  position: absolute;
+  top: -1px;
+  z-index: 1;
+}
+.container-about .svg-bottom {
+  position: absolute;
+  bottom: -1px;
+}
+.container-about .presentation::before {
+  content: "";
+  position: absolute;
+  background: rgba(13, 146, 35, 0.7803921569);
+  width: 100%;
+  height: inherit;
+}
+.container-about .presentation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../Images/backAbout.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 120vh;
+}
+.container-about .presentation .center {
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  gap: 5%;
+}
+.container-about .presentation .center .text-about {
+  width: 600px;
+  padding: 15px;
+}
+.container-about .presentation .center .text-about h1 {
+  font-family: gramja;
+  font-size: clamp(35px, 7vw, 80px);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+  color: #fbfcff;
+  text-shadow: 2px 2px 4px #000000;
+}
+.container-about .presentation .center .text-about p {
+  text-align: center;
+  padding: 20px 0px 20px 0px;
+  font-family: lato-light;
+  font-size: 20px;
+  font-family: roboto;
+  color: #fbfcff;
+}
+.container-about .presentation .center .text-about .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.container-about .presentation .center .text-about .button a {
+  background-color: #ffaf00;
+  padding: 0px 40px 0px 40px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #fbfcff;
+}
+.container-about .presentation .center .text-about .button h6 {
+  font-size: clamp(30px, 5vw, 40px);
+  font-family: petunia;
+}
+.container-about .presentation .center .photo-about {
+  line-height: 0;
+}
+.container-about .presentation .center .photo-about img {
+  width: clamp(250px, 50vw, 400px);
+  border-radius: 20px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+@media (max-width: 1400px) {
+  .container-about .presentation {
+    height: 150vh;
+  }
+}
+.container-classes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-classes .contents {
+  max-width: 70%;
+}
+.container-classes .contents .title {
+  margin: 30px 0px 30px 0px;
+}
+.container-classes .contents .title h2 {
+  font-weight: bold;
+  font-size: clamp(30px, 5vw, 60px);
+  font-family: petunia;
+  text-align: center;
+}
+.container-classes .contents .title figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-classes .contents .title figure img {
+  width: clamp(300px, 30vw, 500px);
+}
+.container-classes .contents .title h1 {
+  font-family: gramja;
+  font-size: clamp(35px, 7vw, 80px);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+}
+.container-classes .contents .targets {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.container-classes .contents .targets .target {
+  width: clamp(300px, 30vw, 400px);
+  border-radius: 0px 0px 20px 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.container-classes .contents .targets .target figure img {
+  width: clamp(300px, 30vw, 400px);
+  display: block;
+  border-radius: 20px 20px 0px 0px;
+}
+.container-classes .contents .targets .target figure figcaption {
+  border: 1px solid rgba(88, 88, 88, 0.171);
+  border-top: 0;
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+}
+.container-classes .contents .targets .target figure figcaption h4 {
+  font-family: Gramja;
+  font-size: clamp(22px, 2.5vw, 30px);
+}
+.container-classes .contents .targets .target figure figcaption h3 {
+  font-family: Gramja;
+  font-size: 30px;
+}
+.container-classes .contents .targets .target figure figcaption p {
+  padding: 20px 0px 20px 0px;
+  font-family: lato-light;
+  font-size: 20px;
+}
+
+.container-teachers {
+  position: relative;
+}
+.container-teachers .svg-top {
+  position: absolute;
+  top: -1px;
+  z-index: 1;
+}
+.container-teachers .svg-bottom {
+  position: absolute;
+  bottom: -1px;
+}
+.container-teachers .background::before {
+  content: "";
+  width: 100%;
+  min-height: inherit;
+  background-color: rgba(8, 23, 73, 0.938);
+  position: absolute;
+}
+.container-teachers .background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../Images/backAbout.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 200vh;
+}
+.container-teachers .background .content {
+  width: 70%;
+  z-index: 1;
+}
+.container-teachers .background .content .title h1 {
+  font-family: gramja;
+  font-size: clamp(35px, 7vw, 80px);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+  color: #fbfcff;
+  margin-bottom: 50px;
+}
+.container-teachers .background .content .teachers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-teachers .background .content .teachers .teacher {
+  margin: 20px;
+}
+.container-teachers .background .content .teachers .teacher figure img {
+  width: clamp(200px, 30vw, 400px);
+  height: clamp(200px, 30vw, 400px);
+  border-radius: 50%;
+}
+.container-teachers .background .content .teachers .teacher figure figcaption {
+  margin-top: 10px;
+  text-align: center;
+}
+.container-teachers .background .content .teachers .teacher figure figcaption h3 {
+  font-family: Gramja;
+  font-size: 30px;
+}
+.container-teachers .background .content .teachers .teacher figure figcaption h4 {
+  font-family: Gramja;
+  font-size: clamp(22px, 2.5vw, 30px);
+  color: #fbfcff;
+}
+
+@media (max-width: 576px) {
+  .container-teachers .background::before {
+    height: inherit;
+  }
+  .container-teachers .background {
+    height: 300vh;
+  }
+}
+@media (max-width: 1400px) {
+  .container-teachers .background::before {
+    height: inherit;
+  }
+  .container-teachers .background {
+    height: 330vh;
+  }
+}
+.container-contact .title {
+  margin: 30px 0px 30px 0px;
+}
+.container-contact .title h2 {
+  font-weight: bold;
+  font-size: clamp(30px, 5vw, 60px);
+  font-family: petunia;
+  text-align: center;
+}
+.container-contact .title figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-contact .title figure img {
+  width: clamp(300px, 30vw, 500px);
+}
+.container-contact .title h1 {
+  font-family: gramja;
+  font-size: clamp(35px, 7vw, 80px);
+  text-align: center;
+  padding: 0px 5px 0px 5px;
+}
+.container-contact .icons {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.container-contact .icons .icon {
+  width: 280px;
+  text-align: center;
+}
+.container-contact .icons .icon h3 {
+  margin-top: 20px;
+  font-family: Gramja;
+  font-size: 30px;
+}
+.container-contact .icons .icon h4 {
+  font-family: Gramja;
+  font-size: clamp(22px, 2.5vw, 30px);
+}
+
+.container-footer {
+  position: relative;
+}
+.container-footer .svg-top {
+  position: absolute;
+  top: -1px;
+  z-index: 1;
+}
+.container-footer footer::before {
+  content: "";
+  width: 100%;
+  height: inherit;
+  background-color: #ffaf00;
+  position: absolute;
+}
+.container-footer footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-end;
+  height: 100vh;
+  background-image: url("../Images/backAbout.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50vh;
+}
+.container-footer footer .content {
+  z-index: 1;
+  margin: 20px;
+}
+.container-footer footer .content h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}/*# sourceMappingURL=main.css.map */

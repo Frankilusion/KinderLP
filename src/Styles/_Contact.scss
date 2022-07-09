@@ -1,0 +1,30 @@
+@use'./base' as *;
+
+@mixin Contact {
+        .container-contact{
+            
+            .title{
+                @include Title;
+            }
+            .icons{
+                
+                margin: 50px;
+                @include Center;
+                flex-wrap: wrap;
+                gap: 50px;
+                .icon{
+                 width: 280px;
+                 text-align: center;
+                 h3{
+                    margin-top: 20px;
+                    @include H3;
+                 }
+                 h4{
+                    @include H4;
+                 }
+                }
+            }
+        }
+
+        
+}

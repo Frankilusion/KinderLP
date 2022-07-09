@@ -1,0 +1,130 @@
+$primary-color: #ea3d84;
+$secondary-color: #ffaf00;
+$third-color:#16f981;
+$fourth-color:#18bcc5;
+$white-color: #fbfcff;
+
+@mixin Center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin H1{
+    font-family: gramja;
+    font-size: clamp(35px, 7vw, 80px);
+    text-align: center;
+    padding: 0px 5px 0px 5px;
+
+}
+@mixin H2 {
+    font-weight: bold;
+    font-size: clamp(30px, 5vw, 60px);
+    font-family: petunia;
+    text-align: center;
+}
+@mixin H3{
+    font-family: Gramja;
+    font-size: 30px; 
+}
+@mixin H4{
+    font-family: Gramja;
+    font-size:clamp(22px, 2.5vw, 30px)
+}
+@mixin H5 {
+    font-size: clamp(30px, 5vw, 50px);
+    text-align: center;
+    font-family:petunia;
+    color: $white-color;
+    text-shadow: 2px 2px 4px #000000;
+}
+@mixin P{
+    padding: 20px 0px 20px 0px;
+    font-family: lato-light;
+    font-size:20px;
+}
+@mixin BackWallpaper($ruta) {
+        height: 100vh;
+        background-image: url($ruta);
+        background-attachment: fixed;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+@mixin Button {
+    @include Center;
+    margin: 20px;
+    a{  
+        background-color: $secondary-color;
+        padding: 0px 40px 0px 40px;  
+        border-radius: 30px;            
+        text-decoration: none;
+        color: $white-color;
+    }
+    h6{
+        font-size:clamp(30px, 5vw, 40px);
+        font-family: petunia;
+    }
+}
+@mixin Title {
+    margin: 30px 0px 30px 0px;
+    h2{
+        @include H2;
+    }
+    figure{
+        @include Center;
+        img{    
+        width:clamp(300px, 30vw, 500px);
+        }   
+    } 
+    h1{
+        @include H1;
+    }
+}
+@mixin Allcolor {
+    .color1{
+        color:$primary-color;
+    }
+    .color2{
+        color:$secondary-color; 
+    }   
+    .color3{
+        color:$third-color;
+    }   
+    .color4{
+        color:$fourth-color;
+    }        
+}
+@mixin Targets {
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap:30px;
+           .target{
+            width: clamp(300px, 30vw, 400px);
+            border-radius: 0px 0px 20px 20px;
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;          
+                    figure{
+                            img{
+                                width: clamp(300px, 30vw, 400px);
+                                display: block;
+                                border-radius: 20px 20px 0px 0px;
+                            }
+                            figcaption{
+                                border: 1px solid rgba(88, 88, 88, 0.171);
+                                border-top: 0;
+                                border-radius: 0px 0px 20px 20px;
+                                padding: 20px;
+                                h4{
+                                    @include H4;
+                                    }
+                                h3{
+                                    @include H3;
+                                }                                                                  
+                                p{
+                                    @include P;
+                                }
+                            } 
+                        }         
+            }                 
+}

@@ -1,0 +1,18 @@
+@use'./base' as *;
+@use'./Ages' as *;
+@use'./Classes' as *;
+@use'./Home' as *;
+@use'./About' as *;
+@use'./Contact' as *;
+@use'./Teachers' as *;
+@use'./Footer' as *;
+@use'./Navbar' as *;
+@include Allcolor;
+@include Navbar;
+@include Home;
+@include Ages;
+@include About;
+@include Classes;
+@include Teachers;
+@include Contact;
+@include Footer;

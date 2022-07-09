@@ -1,38 +1,30 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Kids";
+  src: url("Fonts/Kids.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "Gramja";
+  src: url("Fonts/Gamja.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "Petunia";
+  src: url("Fonts/petunia.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
 }
-
-.App-link {
-  color: #61dafb;
+html {
+  scroll-behavior: smooth;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+body {
+  background-color: #fbfcff;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,73 @@
+@use'./base' as *;
+
+@mixin About {
+.container-about{
+    position: relative;
+    .svg-top{
+        position: absolute;
+        top: -1px;
+        z-index: 1;  //por el before  
+    }
+    .svg-bottom{
+        position: absolute;
+        bottom : -1px;
+    }
+    .presentation::before{
+        content: "";
+        position: absolute;
+        background: #0d9223c7;
+        width: 100%;
+        height: inherit;                
+    }
+    .presentation{
+        @include Center;
+        @include BackWallpaper('../Images/backAbout.jpg');
+        background-attachment: fixed;
+        height:120vh;
+        .center{
+        z-index: 1;    
+        overflow: hidden;
+        @include Center;
+        flex-wrap: wrap;   
+        flex-grow: 1; 
+        gap:5%;
+        .text-about{
+            width: 600px;
+            padding: 15px;
+            h1{ 
+                @include H1;
+                color: $white-color; 
+                text-shadow: 2px 2px 4px #000000;    
+            }
+            p{
+               text-align: center;
+                @include P;
+                
+                font-family:roboto;
+                color: #fbfcff;
+            }
+            .button{ 
+                @include Button;
+            } 
+        }   
+        .photo-about{
+            line-height: 0; //una imagen dentro de un div genera espacio fantasma ya que se considera una letra
+            img{
+            
+                width: clamp(250px, 50vw, 400px);
+                border-radius: 20px;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    
+                    }
+        }
+        } 
+    }    
+    
+}
+@media (max-width: 1400px){
+    .container-about{
+        .presentation{
+            height: 150vh;
+        }
+    }
+}
+}

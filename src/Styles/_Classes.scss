@@ -1,0 +1,19 @@
+@use'./base' as *;
+@mixin Classes {
+    //Start classes
+.container-classes{
+    @include Center;
+   .contents{
+        max-width: 70%;        
+        .title{
+           @include Title;
+        }
+        .targets{
+            @include Targets;
+        }
+    }
+}
+    //End classes
+}
+
+

@@ -1,0 +1,38 @@
+@use'./base' as *;
+@mixin Home {
+    .container-home{
+        position: relative;
+        .content::before{
+            content: "";
+            width: 100%;
+            height: inherit;
+            position: absolute;
+            background: linear-gradient(0deg, $primary-color,#ea3d8567);
+        }
+        .content{ 
+            @include BackWallpaper('../Images/photo-home.jpg');
+            @include Center;
+            .tittleMain{
+                position: absolute;  
+                z-index: 1;
+                h5{            
+                    @include H5;
+                }            
+                h1{    
+                    @include H1;      
+                    color: $white-color;
+                    text-shadow: 2px 2px 4px #000000;
+                    
+                }
+                .button{ 
+                   @include Button;
+                } 
+            }        
+        } 
+            .svg-bottom{
+               position: absolute;
+                bottom: -1px;        
+            }
+    }
+    
+}

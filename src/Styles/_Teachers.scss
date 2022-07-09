@@ -1,0 +1,92 @@
+@use'./base' as *;
+
+@mixin Teachers(){
+    .container-teachers{
+        position: relative;
+        .svg-top{
+            position: absolute;
+            top: -1px;
+            z-index: 1;  //por el before  
+        }
+        .svg-bottom{
+            position: absolute;
+            bottom : -1px;
+        }
+        .background::before{
+            content: "";
+            width: 100%;
+            min-height: inherit;
+            background-color: rgba(8, 23, 73, 0.938);
+            position: absolute;
+        }
+        .background{
+            position: relative;
+            @include Center;
+            @include BackWallpaper('../Images/backAbout.jpg');
+            min-height: 200vh;
+            .content{
+               width: 70%;
+                z-index: 1;
+                .title{
+                    h1{
+                        @include H1;
+                        color: $white-color;
+                        margin-bottom: 50px;
+                    }
+                }
+                .teachers{
+                    @include Center;
+                    flex-wrap: wrap;                  
+                    .teacher{
+                        margin: 20px;
+                        figure{                           
+                            img{
+                                width: clamp(200px,30vw,400px);
+                                height:clamp(200px,30vw,400px);
+                                border-radius: 50%;
+                            }
+                            figcaption{
+                                margin-top: 10px;
+                                text-align: center;
+                                h3{
+                                    @include H3;
+                                }
+                                h4{
+                                    @include H4;
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }   
+
+
+
+         }
+    }
+
+
+    @media (max-width: 576px) {
+
+        .container-teachers{
+            .background::before{
+                height: inherit;
+            }
+            .background{
+                height: 300vh;
+            }
+        }
+    }
+       
+    @media (max-width: 1400px) {
+        .container-teachers{
+            .background::before{
+                height: inherit;
+            }
+            .background{
+                height: 330vh;
+            }
+        }
+    }
+}
