@@ -272,6 +272,11 @@
     height: 150vh;
   }
 }
+@media (max-width: 768px) {
+  .container-about .presentation {
+    height: 120vh;
+  }
+}
 .container-classes {
   display: flex;
   justify-content: center;

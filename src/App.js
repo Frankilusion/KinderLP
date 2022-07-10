@@ -12,7 +12,6 @@ import Navbar from './Components/Nabvbar';
 function App() {
   return (
     <div className="App">
-      <Navbar/>
       <Home/>
       <Ages/>
       <About/>
